@@ -1,0 +1,13 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "type": "module",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.19.15",
+    "hardhat": "^2.22.0",
+    "mocha": "^11.7.5",
+    "typescript": "~5.8.0"
+  }
+}
