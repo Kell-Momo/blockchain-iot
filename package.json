@@ -1,21 +1,29 @@
 {
   "name": "blockchain-iot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Oracle / bridge MQTT → Blockchain pour un projet IoT décentralisé.",
+  "main": "oracle/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":          "node oracle/index.js",
+    "dev":            "node --watch oracle/index.js",
+    "start:full":     "powershell -ExecutionPolicy Bypass -File .\\start.ps1",
+    "start:skip":     "powershell -ExecutionPolicy Bypass -File .\\start.ps1 -SkipDeploy",
+    "start:simulate": "powershell -ExecutionPolicy Bypass -File .\\start.ps1 -Simulate",
+    "start:sim:skip": "powershell -ExecutionPolicy Bypass -File .\\start.ps1 -SkipDeploy -Simulate",
+    "simulate":       "node test-mqtt.js",
+    "simulate:anomaly": "node test-mqtt.js --anomaly",
+    "chain":          "cd blockchain && npx hardhat node",
+    "deploy":         "cd blockchain && npx hardhat run scripts/deploy.js --network localhost"
   },
-  "keywords": [],
+  "keywords": ["iot", "blockchain", "mqtt", "ethers", "hardhat"],
   "author": "",
   "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "hardhat": "^3.2.0"
-  },
   "dependencies": {
     "dotenv": "^17.3.1",
     "ethers": "^6.16.0",
     "mqtt": "^5.15.0"
+  },
+  "devDependencies": {
+    "hardhat": "^3.2.0"
   }
 }

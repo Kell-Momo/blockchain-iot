@@ -1,0 +1,42 @@
+[
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "temperature", "type": "uint256" }
+    ],
+    "name": "sendData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "sensorAddr", "type": "address" }
+    ],
+    "name": "getStatus",
+    "outputs": [
+      { "internalType": "uint8", "name": "", "type": "uint8" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "", "type": "address" }
+    ],
+    "name": "sensors",
+    "outputs": [
+      { "internalType": "uint256", "name": "anomalyCount", "type": "uint256" },
+      { "internalType": "uint8",   "name": "status",       "type": "uint8"   }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "internalType": "address", "name": "sensor", "type": "address" }
+    ],
+    "name": "SensorRevoked",
+    "type": "event"
+  }
+]

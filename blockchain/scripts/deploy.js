@@ -1,7 +1,7 @@
 import hre from "hardhat";
 
 async function main() {
-  console.log("Deploying contract...");
+  console.log("Deploying IoTCircuitBreaker...");
 
   const Contract = await hre.ethers.getContractFactory("IoTCircuitBreaker");
 
